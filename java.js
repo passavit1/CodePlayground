@@ -1,14 +1,13 @@
-function sor(x){
-    var getodd = x.filter(x=>x%2).sort((a,b)=>a-b)
-    console.log(getodd)
-    console.log(x.map(x=>x%2 ? 'hello':getodd.pop()))
+function plus(x,y){
+    for (let i=0 ; i<x.length ; i++){
+        for(let k=i+1 ; k<x.length ; k++){
+            if(x[i]+x[k]==y){
+                console.log([i,k])
+            }
+        }
+    }
+
+
 }
 
-
-
-
-
-
-
-
-sor([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+plus([2,3,4,5,6,1,2,4,6,3],9)
