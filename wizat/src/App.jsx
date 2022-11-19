@@ -1,24 +1,27 @@
+import { useDebugValue } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
 function App() {
-  const arr = ["name", "meww", "gunn", "mango", "moon", "hello", "world"];
+  const arr = ["bomb", "name", "gun", "omg", "meww", "moon"];
   const [filter, setFilter] = useState(arr);
-
-  function Fillter(x) {
-    return setFilter(
-      arr.filter((y) => y.toLowerCase().indexOf(x.toLowerCase()) !== -1)
-    );
-  }
-
   return (
     <div>
-      <input type="text" onChange={(x) => Fillter(x.target.value)} />
+      <input
+        type="text"
+        onChange={(x) =>
+          setFilter(() =>
+            arr.filter(
+              (y) =>
+                y.toLowerCase().indexOf(x.target.value.toLowerCase()) !== -1
+            )
+          )
+        }
+      />
       {filter.map((x) => (
         <div>{x}</div>
       ))}
     </div>
   );
 }
-
 export default App;
