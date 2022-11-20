@@ -1,27 +1,37 @@
-import { useDebugValue } from "react";
+import React from "react";
+import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const arr = ["bomb", "name", "gun", "omg", "meww", "moon"];
-  const [filter, setFilter] = useState(arr);
+  const [count, setCount] = useState(0);
+  const [switched, setSwitched] = useState(false);
+  const AssignInterval = useRef("");
+
+  function Switch() {
+    setSwitched(switched === false ? true : false);
+  }
+
+  useEffect(() => {
+    if (switched) {
+      const powerOn = setInterval(() => {
+        setCount((prev) => prev + 1);
+      }, 1000);
+      AssignInterval.current = powerOn;
+    } else {
+      clearInterval(AssignInterval.current);
+    }
+  }, [switched]);
+
   return (
     <div>
-      <input
-        type="text"
-        onChange={(x) =>
-          setFilter(() =>
-            arr.filter(
-              (y) =>
-                y.toLowerCase().indexOf(x.target.value.toLowerCase()) !== -1
-            )
-          )
-        }
-      />
-      {filter.map((x) => (
-        <div>{x}</div>
-      ))}
+      <p>{count}</p>
+      <button onClick={Switch}>start</button>
+      <button onClick={Switch}>stop</button>
+      <button onClick={() => setCount(0)}>reset</button>
     </div>
   );
 }
+
 export default App;
