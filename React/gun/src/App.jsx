@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 
 function App() {
-  const arr = ["what", "is", "your", "name", "my", "name", "is", "passavit"];
+  const arr = ["what", "is", "your", "name", "my", "name", "is"];
 
   const [count, setCount] = useState(0);
   const [switched, setSwitched] = useState(false);
