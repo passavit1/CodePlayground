@@ -1,3 +1,11 @@
-var isEmpty = function (obj) {
-  return Object.keys(obj).length === 0; //การดึงเฉพาะ Key ออกมา หรือสามารถดึง Values ได้ดังนี้ Object.Values(obj)
+const two_sum = (number, target) => {
+  for (let i = 0; i < number.length; i++) {
+    for (let j = i + 1; j < number.length; j++) {
+      if (number[i] + number[j] === target) {
+        result.push([i, j]);
+      }
+    }
+  }
+
+  console.log(result);
 };
