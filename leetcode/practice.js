@@ -1,11 +1,9 @@
-const two_sum = (number, target) => {
-  for (let i = 0; i < number.length; i++) {
-    for (let j = i + 1; j < number.length; j++) {
-      if (number[i] + number[j] === target) {
-        result.push([i, j]);
-      }
-    }
-  }
+var createCounter = function (n) {
+  let count = n; // Initialize count with the given value
 
-  console.log(result);
+  return function () {
+    const currentCount = count; // Store the current count
+    count++; // Increment the count for the next call
+    return currentCount; // Return the current count
+  };
 };
