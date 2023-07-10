@@ -1,9 +1,13 @@
-var createCounter = function (n) {
-  let count = n; // Initialize count with the given value
-
-  return function () {
-    const currentCount = count; // Store the current count
-    count++; // Increment the count for the next call
-    return currentCount; // Return the current count
+var expect = function (val) {
+  return {
+    toBe: (data) => {
+      if (val === data) return true;
+      throw new Error("Not Equal");
+      //   else return { error: "Not Equal" };
+    },
+    notToBe: (data) => {
+      if (val !== data) return true;
+      throw new Error("Equal");
+    },
   };
 };
