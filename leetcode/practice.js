@@ -1,3 +1,11 @@
-var isEmpty = function (obj) {
-  return Object.keys(obj).length === 0; //การดึงเฉพาะ Key ออกมา หรือสามารถดึง Values ได้ดังนี้ Object.Values(obj)
-};
+const http = require("http");
+
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { "content-type": "text/plain" });
+    res.write("hello test create function");
+    res.end();
+  })
+  .listen(8080, () => {
+    console.log(`this server is listening to port 8080`);
+  });
