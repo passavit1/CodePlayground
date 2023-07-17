@@ -1,11 +1,12 @@
 const http = require("http");
+const port = 8080;
 
 http
   .createServer((req, res) => {
-    res.writeHead(200, { "content-type": "text/plain" });
-    res.write("hello test create function");
+    res.writeHead(200, { "content-type": "text/html" });
+    res.write("hello tester create server");
     res.end();
   })
-  .listen(8080, () => {
-    console.log(`this server is listening to port 8080`);
+  .listen(port, () => {
+    console.log(`this server is listen to ${port}`);
   });
