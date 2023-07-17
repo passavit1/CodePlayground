@@ -7,6 +7,12 @@ You may assume the object or array is the output of JSON.parse.
 
 https://leetcode.com/problems/is-object-empty/
 
+TEST CASE :
+
+case 1 : Input: obj = {"x": 5, "y": 42} output = false;
+case 2 : Input: obj = {} output = true;
+case 3 : Input: obj = [null, false, 0] output =  false;
+
 */
 
 var isEmpty = function (obj) {
