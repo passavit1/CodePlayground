@@ -1,0 +1,11 @@
+table {
+  border: solid 1px blue;
+  padding: 5px;
+
+  border-spacing: 10px; /* Add spacing between cells */
+}
+
+td {
+  border: solid 1px green;
+  padding: 10px;
+}

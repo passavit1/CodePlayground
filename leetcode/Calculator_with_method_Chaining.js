@@ -51,3 +51,6 @@ class Calculator {
     return this.result;
   }
 }
+
+const result = new Calculator(10).add(20).power(2).getResult();
+console.log(result);
