@@ -19,6 +19,8 @@ var fibGenerator = function*() {
     
 };
 
+ref : https://leetcode.com/problems/generate-fibonacci-sequence/ ;
+
 */
 
 var fibGenerator = function* () {

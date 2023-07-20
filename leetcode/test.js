@@ -1,6 +1,10 @@
-let arr = [0, 1, 2, 3, 4];
-let answer = [];
+let arr = [1, 2, 3, 4, 5];
 
-for (let i in arr) {
-  console.log(i);
-}
+let arr1 = arr.shift();
+
+console.log(arr);
+console.log(arr1);
+
+const chuck = (arr, size) => {
+  if (size >= arr.length) console.log([arr]);
+};
