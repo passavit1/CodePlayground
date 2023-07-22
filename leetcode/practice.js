@@ -1,13 +1,16 @@
-let result = [];
+var createCounter = function (init) {
+  let reset = init;
 
-const two_sum = (number, target) => {
-  for (let i = 0; i < number.length; i++) {
-    for (let j = i + 1; j < number.length; j++) {
-      if (number[i] + number[j] === target) {
-        result.push([i, j]);
-      }
-    }
-  }
-
-  console.log(result);
+  return {
+    increment() {
+      return ++reset;
+    },
+    decrement() {
+      return --reset;
+    },
+    reset() {
+      reset = init;
+      return init;
+    },
+  };
 };
