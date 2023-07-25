@@ -8,6 +8,12 @@ Test case :
 Case 1 : 10 , ["call","call","call"]
 Case 2 : -2 , ["call","call","call","call","call"]
 
+var createCounter = function(n) {
+    return function() {
+        
+    };
+};
+
 */
 
 var createCounter = function (n) {

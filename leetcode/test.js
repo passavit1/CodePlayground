@@ -1,10 +1,17 @@
-let arr = [1, 2, 3, 4, 5];
+/*
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-let arr1 = arr.shift();
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-console.log(arr);
-console.log(arr1);
+You can return the answer in any order.
 
-const chuck = (arr, size) => {
-  if (size >= arr.length) console.log([arr]);
+https://leetcode.com/problems/two-sum/
+*/
+
+let result = [];
+
+const two_sum = (number, targer) => {
+  for (let i = 0; i < number.length; i++) {
+    for (let k = i + 1; k < number.length; k++) {}
+  }
 };

@@ -24,8 +24,6 @@ var createCounter = function(init) {
     
 };
 
-
-
 */
 
 var createCounter = function (init) {
