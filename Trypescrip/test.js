@@ -1,4 +1,5 @@
-var a = 10;
-console.log(a);
-
-con;
+// array
+var names = [];
+names.push('hello');
+names.push(2);
+console.log(names);
