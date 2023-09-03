@@ -1,18 +1,12 @@
-import Alert from "react-bootstrap/Alert";
-//
+// BasicExample.js
+import { useState } from "react";
 
 function BasicExample() {
-  return (
-    <>
-      {["primary", "secondary", "success", "danger", "warning", "light"].map(
-        (variant) => (
-          <Alert key={variant} variant={variant}>
-            This is a {variant} alert—check it out!
-          </Alert>
-        )
-      )}
-    </>
-  );
+  const shoot = () => {
+    alert("Great Shot!");
+  };
+
+  return <button onClick={shoot}>Take the shot!</button>;
 }
 
 export default BasicExample;
